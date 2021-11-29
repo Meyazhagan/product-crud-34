@@ -1,0 +1,65 @@
+{
+  "navBar": [
+    {
+      "value": "Home",
+      "link": "#",
+      "active": true
+    },
+    {
+      "value": "About",
+      "link": "#",
+      "active": false
+    },
+    {
+      "value": "Cart",
+      "link": "#",
+      "active": false
+    },
+    {
+      "value": "Shop",
+      "link": "#",
+      "active": false,
+      "dropdown": [
+        {
+          "value": "All Products",
+          "link": "#!"
+        },
+        {
+          "value": "New Products",
+          "link": "#!"
+        },
+        {
+          "value": "",
+          "link": "#!"
+        },
+        {
+          "value": "Popular Items",
+          "link": "#!"
+        },
+        {
+          "value": "New Arrivals",
+          "link": "#!"
+        },
+        {
+          "value": "Trending",
+          "link": "#!"
+        }
+      ]
+    },
+    {
+      "value": "Login As",
+      "link": "#",
+      "active": false,
+      "dropdown": [
+        {
+          "value": "User",
+          "link": "/user"
+        },
+        {
+          "value": "Admin",
+          "link": "/admin"
+        }
+      ]
+    }
+  ]
+}

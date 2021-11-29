@@ -1,5 +1,6 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import NavBar from "../component/app/NavBar";
 import Admin from "../component/pages/Admin";
 import Cart from "../component/pages/Cart";
@@ -16,6 +17,7 @@ function AppRoutes() {
       <ProductProvider>
         <CartProvider>
           <NavBar />
+          <ToastContainer position="bottom-right" />
           <Switch>
             <Route path="/user/carts" component={Cart} />
             <Route path="/user" exact component={User} />

@@ -21,10 +21,10 @@ function CartProvider({ children }) {
     const newCarts = [...carts];
     const index = carts.findIndex((c) => c.id === product.id);
     if (index === -1) {
-      update(product.id, { inCart: true });
+      update(product.id, { inCart: true }, "Added to Cart");
       newCarts.push(product);
     } else {
-      update(product.id, { inCart: false });
+      update(product.id, { inCart: false }, "Removed From Cart");
       newCarts.splice(index, 1);
     }
     setCarts(newCarts);

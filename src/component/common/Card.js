@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import "../../css/card.css";
 
 function Card({ product }) {
   const { title, oldPrice, newPrice, rating, sale, inCart, imageUrl } = product;
@@ -44,7 +45,7 @@ function Card({ product }) {
         </div>
         {/* <!-- Product actions--> */}
         <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-          <div className="text-center">
+          <div className="text-center ">
             <button
               className="btn btn-outline-dark mt-auto"
               onClick={() => handleCart(product)}

@@ -4,7 +4,7 @@ import CheckInput from "./CheckInput";
 import Input from "./Input";
 import { pick } from "lodash";
 
-function Form({ initialValues, onSubmit }) {
+function Form({ initialValues, onSubmit, title }) {
   const validate = (values) => {
     const errors = {};
     // if (!values.oldPrice) errors.oldPrice = "Old Price is required";
@@ -28,6 +28,7 @@ function Form({ initialValues, onSubmit }) {
   return (
     <div className="container mt-4 p-4">
       <div className="shadow p-4 rounded-3">
+        <h2>{title}</h2>
         <form>
           <Input
             label="Product Picture Link"

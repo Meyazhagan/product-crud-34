@@ -1,9 +1,11 @@
+import NavLink from "./NavLink";
+
 function Dropdown({ value, link, index }) {
   return value ? (
     <li key={index}>
-      <a className="dropdown-item" href={link}>
+      <NavLink classes="dropdown-item" path={link}>
         {value}
-      </a>
+      </NavLink>
     </li>
   ) : (
     <li key={index}>

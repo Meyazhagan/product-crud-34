@@ -15,6 +15,7 @@ function CreateProduct() {
         Back
       </button>
       <Form
+        title={"Add Product"}
         initialValues={{
           imgeUrl: "",
           title: "",

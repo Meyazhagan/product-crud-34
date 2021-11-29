@@ -2,6 +2,7 @@ import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import NavBar from "../component/app/NavBar";
+import Footer from "../component/common/Footer";
 import Admin from "../component/pages/Admin";
 import Cart from "../component/pages/Cart";
 import CreateProduct from "../component/pages/CreateProduct";
@@ -27,6 +28,7 @@ function AppRoutes() {
             <Route path="/admin" exact component={Admin} />
             <Redirect from="/" exact to="/user" />
           </Switch>
+          <Footer />
         </CartProvider>
       </ProductProvider>
     </AppProvider>

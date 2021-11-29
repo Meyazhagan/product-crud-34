@@ -18,6 +18,7 @@ function EditProduct() {
       </button>
       <Form
         initialValues={get(productId)}
+        title={"Edit Product"}
         onSubmit={(values) => {
           update(productId, values);
           console.log(values);

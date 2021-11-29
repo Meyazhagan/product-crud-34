@@ -1,33 +1,32 @@
 import classNames from "classnames";
 import React from "react";
 import Dropdown from "./dropDown";
+import NavLink from "./NavLink";
 
 function NavList({ value, link, active, dropdown, index }) {
-  let activeLi = (
+  let activeList = (
     <li className={classNames("nav-item")} key={index}>
-      <a
-        className={classNames("nav-link", { active: active })}
+      <NavLink
+        classes={classNames("nav-link", { active: active })}
         aria-current="page"
         href={link}
       >
         {value}
-      </a>
+      </NavLink>
     </li>
   );
 
   if (dropdown) {
-    activeLi = (
+    activeList = (
       <li className={classNames("nav-item dropdown ")} key={index}>
-        <a
-          className={"nav-link dropdown-toggle"}
+        <button
+          className="nav-link dropdown-toggle btn"
           id="navbarDropdown"
-          href={link}
-          role="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
           {value}
-        </a>
+        </button>
         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
           {dropdown.map((list, index) => (
             <Dropdown key={index} {...list} index={index} />
@@ -36,7 +35,7 @@ function NavList({ value, link, active, dropdown, index }) {
       </li>
     );
   }
-  return activeLi;
+  return activeList;
 }
 
 export default NavList;
